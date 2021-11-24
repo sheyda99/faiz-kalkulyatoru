@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizlərin hesablanması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Faizlərin hesablanması</h1>
+
+    <div class="d-flex">
+        <form id="form">
+            <div>
+                <label for="type">Seçin:</label>
+                <select name="type" id="type">
+                    <option value="simple">Sadə faiz artımı</option>
+                    <option value="complex">Mürəkkəb faiz artımı</option>
+                </select>
+            </div>
+            <div>
+                <label for="pv">İlkin məbləğ (PV):</label>
+                <input type="number" name="pv" id="pv" min="0" autocomplete="off" required>
+            </div>
+            <div>
+                <label for="t">Müddət (il):</label>
+                <input type="number" name="t" id="t" min="0" autocomplete="off" required>
+            </div>
+            <div>
+                <label for="pct">Artım faizi (%):</label>
+                <input type="number" name="pct" id="pct" min="0" autocomplete="off" required>
+            </div>
+            <div>
+                <input type="submit" id="calc" class="btn" value="Hesabla" >
+                <a id="clear" class="btn" href="#">Sıfırla</a>
+            </div>
+        </form>
+    
+        <div id="result">
+            <p>Son məbləğ (FV): <span id="fv"></span></p>
+            <p>Kapitallaşma (FV - PV): <span id="k"></span></p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
